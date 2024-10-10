@@ -62,6 +62,25 @@ function App(){
     setNewStudent({ ...newStudent, [name]: value });
   };
 
-  
+  return (
+    <div className='container'>
+      <h1>Öğrenci Bilgi Sistemi <button onClick={openModal}>yeni</button></h1>
+      <div className="studentTable">
+        <ul className="studentTableTitles">
+          <li>Ad</li>
+          <li>Soyad</li>
+          <li>Not 1</li>
+          <li>Not 2</li>
+          <li>Not 3</li>
+          <li>Ortalama</li>
+          <li>#</li>
+        </ul>
+        {data.map(student => (
+          <StudentRow key={student.id} {...student} updateRecord={updateRecord} deleteRecord={deleteRecord} />
+        ))}
+      </div>
+
+
+
 
 }
