@@ -25,6 +25,43 @@ function App(){
     fetchData();
   }, []);
 
+  const save = async () => {
+    const { data: updatedData, error } = await supabase.from('students').select('*');
+    if (error) console.error('Error fetching data:', error);
+    else setData(updatedData);
+  };
+
+  const addNewStudent = async (e) => {
+    e.preventDefault();
+    const { error } = await supabase.from('students').insert([newStudent]);
+    if (error) console.error('Error inserting data:', error);
+    else {
+      setNewStudent({ first_name: '', last_name: '', not1: '', not2: '', not3: '' });
+      closeModal();
+      save();
+    }
+  };
+
+  const updateRecord = async (record) => {
+    const { error } = await supabase.from('students').update(record).eq('id', record.id);
+    if (error) console.error('Error updating data:', error);
+    else save();
+  };
 
   
+  const deleteRecord = async (id) => {
+    if (!confirm('Emin misiniz?')) return;
+    const { error } = await supabase.from('students').delete().eq('id', id);
+    if (error) console.error('Error deleting data:', error);
+    else save();
+  };
+
+  
+  const handleNewStudentChange = (e) => {
+    const { name, value } = e.target;
+    setNewStudent({ ...newStudent, [name]: value });
+  };
+
+  
+
 }
