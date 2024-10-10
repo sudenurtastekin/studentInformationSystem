@@ -1,4 +1,4 @@
-import { login } from './actions'
+import { login, signup } from './actions'
 
 export default function LoginPage() {
   return (
@@ -15,23 +15,4 @@ export default function LoginPage() {
       </form>
     </div>
   )
-}
-
-export async function signup(formData) {
-  const supabase = createClient()
-
-  const data = {
-    email: formData.get('email'),
-    password: formData.get('password'),
-    firstName: formData.get('name'),
-  }
-
-  const { error } = await supabase.auth.signUp(data)
-
-  if (error) {
-    redirect('/error')
-  }
-
-  revalidatePath('/user', 'layout')
-  redirect('/user')
 }
