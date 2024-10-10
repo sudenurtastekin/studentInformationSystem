@@ -264,3 +264,31 @@ h1 button:hover {
   box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
   outline: none;
 }
+
+/* İşlem Butonları */
+.studentTableCol button {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delBtn {
+  background-color: #e53e3e;
+  color: #fff;
+}
+
+.delBtn:hover {
+  background-color: #c53030;
+}
+
+.saveBtn {
+  background-color: #38a169;
+  color: #fff;
+}
+
+.saveBtn:hover {
+  background-color: #2f855a;
+}
