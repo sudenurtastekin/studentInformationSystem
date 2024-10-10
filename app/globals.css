@@ -49,3 +49,33 @@ li {
   margin: 50px auto;
   padding: 0 20px;
 }
+
+
+.login-sign-content {
+  margin: 0 auto;
+  width: 385px;
+  padding: 200px 30px 120px 30px;
+
+  h1 {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #000;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 17px;
+    color: #2b2b2b;
+    margin-bottom: 50px;
+  }
+
+  a {
+    width: 327px;
+    padding: 15px 135px;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+}
