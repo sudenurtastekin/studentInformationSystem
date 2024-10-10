@@ -97,8 +97,26 @@ function App() {
       )}
     </div>
   );
+  function StudentRow({ id, first_name, last_name, not1, not2, not3, updateRecord, deleteRecord }) {
+    const [isEditing, setEditing] = useState(false);
+
+    const calculateAverage = () => {
+      const n1 = parseFloat(not1) || 0;
+      const n2 = parseFloat(not2) || 0;
+      const n3 = parseFloat(not3) || 0;
+      return ((n1 + n2 + n3) / 3).toFixed(2); // Ortalama hesaplama ve iki ondalık
+    };
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const formObj = Object.fromEntries(formData);
+      formObj.id = id;
+      updateRecord(formObj);
+      setEditing(false);
+    }
 
 
 
 
-}
+  }
