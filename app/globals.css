@@ -98,3 +98,75 @@ li {
   color: #000;
   border: 2px solid #000;
 }
+
+
+.LoginContent {
+  margin: 0 auto;
+  width: 385px;
+  padding: 200px 30px 120px 30px;
+
+  input {
+    width: 327px;
+    padding: 15px 15px;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 2px solid #b9b9b9;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 17px;
+    color: #2b2b2b;
+    margin-bottom: 50px;
+  }
+
+  button {
+    width: 327px;
+    padding: 15px 135px;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+}
+
+.LSbuttons button:nth-child(1) {
+  background-color: #000;
+  color: #ffff;
+}
+
+.SignupContent {
+  margin: 0 auto;
+  width: 385px;
+  padding: 200px 30px 120px 30px;
+
+  input {
+    width: 327px;
+    padding: 15px 15px;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 2px solid #b9b9b9;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 17px;
+    color: #2b2b2b;
+    margin-bottom: 50px;
+  }
+
+  button {
+    width: 327px;
+    padding: 15px 120px;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: #000;
+    color: #ffff;
+  }
+}
