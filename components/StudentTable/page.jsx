@@ -115,8 +115,49 @@ function App() {
       updateRecord(formObj);
       setEditing(false);
     }
-
-
-
-
+    return (
+      <form className="tableForm"  onSubmit={handleSubmit} onDoubleClick={() => setEditing(true)}>
+        {isEditing ? (
+          <>
+            <div className="studentTableCol">
+              <input type="text" required name='first_name' defaultValue={first_name} />
+            </div>
+            <div className="studentTableCol">
+              <input type="text" required name='last_name' defaultValue={last_name} />
+            </div>
+            <div className="studentTableCol">
+              <input type="number" required name='not1' defaultValue={not1} />
+            </div>
+            <div className="studentTableCol">
+              <input type="number" required name='not2' defaultValue={not2} />
+            </div>
+            <div className="studentTableCol">
+              <input type="number" required name='not3' defaultValue={not3} />
+            </div>
+            <div className="studentTableCol">
+              <span>{calculateAverage()}</span>
+            </div>
+            <div className="studentTableCol">
+              <button type='button' onClick={() => setEditing(false)}>Vazgeç</button>
+              <button className='saveBtn' type='submit'>Kaydet</button>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="studentTableCol">{first_name}</div>
+            <div className="studentTableCol">{last_name}</div>
+            <div className="studentTableCol">{not1}</div>
+            <div className="studentTableCol">{not2}</div>
+            <div className="studentTableCol">{not3}</div>
+            <div className="studentTableCol">{calculateAverage()}</div>
+            <div className="studentTableCol">
+              <button type='button' onClick={() => setEditing(true)}>Düzenle</button>
+              <button className='delBtn' type='button' onClick={() => deleteRecord(id)}>Sil</button>
+            </div>
+          </>
+        )}
+      </form>
+    );
   }
+  
+  export default App;
