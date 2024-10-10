@@ -170,3 +170,8 @@ li {
     color: #ffff;
   }
 }
+
+.admin-dashboard {
+  margin: 0 auto;
+  padding: 50px 60px;
+}
