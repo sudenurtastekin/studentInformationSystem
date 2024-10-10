@@ -116,7 +116,7 @@ function App() {
       setEditing(false);
     }
     return (
-      <form className="tableForm"  onSubmit={handleSubmit} onDoubleClick={() => setEditing(true)}>
+      <form className="tableForm" onSubmit={handleSubmit} onDoubleClick={() => setEditing(true)}>
         {isEditing ? (
           <>
             <div className="studentTableCol">
@@ -159,5 +159,6 @@ function App() {
       </form>
     );
   }
-  
-  export default App;
+}
+
+export default App;
