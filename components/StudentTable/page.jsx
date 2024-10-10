@@ -15,5 +15,16 @@ function App(){
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data, error } = await supabase.from('students').select('*');
+      if (error) console.error('Error fetching data:', error);
+      else setData(data);
+    };
+
+    fetchData();
+  }, []);
+
+
   
 }
