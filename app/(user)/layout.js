@@ -1,4 +1,4 @@
-import Header from "@/components/Header/page";
+import Header from "@/components/Header";
 import StudentTable from "@/components/StudentTable/serverStudentTable"
 
 export default function UserLayout({ children }) {
