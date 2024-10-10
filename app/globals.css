@@ -202,3 +202,65 @@ h1 button:hover {
   background-color: #005bb5;
   transform: translateY(-3px);
 }
+
+/* Öğrenci Tablosu */
+.studentTable {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 40px;
+
+}
+
+.studentTableTitles {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) 10%;
+  background-color: #2d3748;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.tableForm {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* 7 sütun (Ad, Soyad, Not 1, Not 2, Not 3, Ortalama, İşlemler) */
+  gap: 10px;
+  align-items: center;
+}
+
+.studentTableCol {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+
+}
+
+.studentTableCol:nth-child(odd) {
+  background-color: #f1f5f9;
+}
+
+.studentTableCol:hover {
+  background-color: #edf2f7;
+}
+
+.studentTableCol input {
+  padding: 8px;
+  border: 2px solid #cbd5e0;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  width: 100%;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.studentTableCol input:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
+  outline: none;
+}
